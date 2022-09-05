@@ -9,7 +9,7 @@ export default function Card(props) {
                 <img src={star} className="card-star" />
                 <span>{props.rating}</span>
                 <span className="amount">({props.review}) • </span>                
-                <span className="country">{props.country}</span>
+                <span className="country">{props.location}</span>
             </div>
             <p>{props.title}</p>
             <p><span className="price">from ${props.price}</span> / person</p>
