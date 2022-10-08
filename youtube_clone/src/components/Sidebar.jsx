@@ -1,9 +1,9 @@
-import {Stack} from '@mui/material';
-import {categories} from '../utils/constants'; 
+import React from "react";
+import { Stack } from "@mui/material";
 
-const selectedCategory = 'New';
+import { categories } from "../utils/constants";
 
-const Sidebar = () => (
+const Sidebar = ({selectedCategory, setSelectedCategory}) => (
     <Stack
     direction="row"
       sx={{
@@ -15,6 +15,7 @@ const Sidebar = () => (
       (
         <button 
         className='category-btn'
+        onClick={() => setSelectedCategory(category.name)}
         style={{
           background: category.name === selectedCategory && '#fc1530', 
           color: 'white', 
